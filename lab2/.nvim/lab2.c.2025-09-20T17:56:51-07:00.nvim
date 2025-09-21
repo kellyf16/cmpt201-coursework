@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<string.h>
+#include<unistd.h>
+
+char *buffer = NULL;
+size_t size = 0;
+
+int main() {
+  while(true) {
+  printf("Enter program to run.\n");
+  ssize_t _ = getline(&buffer, &size, stdin);
+  execl(buffer, buffer, NULL);
+
+  }}
